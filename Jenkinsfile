@@ -8,7 +8,7 @@ pipeline {
         stage ('Initialize') {
             steps {
                 sh '''
-                    curl "https://api.github.com/repos/diagutierrezro/labs-backend/statuses/$GIT_COMMIT?access_token=4375bfeb24cddaa6a74a811d954193d76666054f" \
+                    curl "https://api.github.com/repos/diagutierrezro/labs-backend/statuses/23e9c6d274c4702cdf5be61446b427ec77265c7c" \
                       -H "Content-Type: application/json" \
                       -X POST \
                       -d "{\"state\": \"pending\",\"context\": \"continuous-integration/jenkins\", \"description\": \"Jenkins\", \"target_url\": \"$BUILD_URL\"}"
@@ -27,7 +27,7 @@ pipeline {
     post{
         always{
             sh '''
-                curl "https://api.github.com/repos/diagutierrezro/labs-backend/statuses/$GIT_COMMIT?access_token=4375bfeb24cddaa6a74a811d954193d76666054f" \
+                curl "https://api.github.com/repos/diagutierrezro/labs-backend/statuses/23e9c6d274c4702cdf5be61446b427ec77265c7c" \
                   -H "Content-Type: application/json" \
                   -X POST \
                   -d "{\"state\": \"$BUILD_STATUS\",\"context\": \"continuous-integration/jenkins\", \"description\": \"Jenkins\", \"target_url\": \"$BUILD_URL\"}"
