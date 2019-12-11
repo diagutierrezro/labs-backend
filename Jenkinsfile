@@ -27,7 +27,7 @@ pipeline {
     post{
         always{
             sh '''
-                curl "https://api.github.com/repos/<GITHUB-USER>/labs-backend/statuses/$GIT_COMMIT?access_token=<ACCESS_TOKEN>" \
+                curl "https://api.github.com/repos/diagutierrezro/labs-backend/statuses/$GIT_COMMIT?access_token=8742c747113a091c2957eed573bacb4327c9e247" \
                   -H "Content-Type: application/json" \
                   -X POST \
                   -d "{\"state\": \"$BUILD_STATUS\",\"context\": \"continuous-integration/jenkins\", \"description\": \"Jenkins\", \"target_url\": \"$BUILD_URL\"}"
