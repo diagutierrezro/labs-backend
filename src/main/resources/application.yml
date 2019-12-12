@@ -1,0 +1,12 @@
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://diagutierrezr.postgres.database.azure.com:5432/labs
+    username: diagutierrezro@diagutierrezr
+    password: Frotglimx0411
+
+  jpa:
+    database: POSTGRESQL
+    show-sql: false
+server:
+  port: 8080  
